@@ -1,0 +1,69 @@
+# Kodi Media Center language file
+# Addon Name: Kodi Chess
+# Addon id: script.chess
+# Addon Provider: Tom Scheper (scheper@gmail.com)
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#32001" #continue
+msgid "Continue"
+msgstr ""
+
+msgctxt "#32002" #new_game
+msgid "New Game"
+msgstr ""
+
+msgctxt "#32003" #play_as
+msgid "Play As"
+msgstr ""
+
+msgctxt "#32004" #white
+msgid "White"
+msgstr ""
+
+msgctxt "#32005" #black
+msgid "Black"
+msgstr ""
+
+msgctxt "#32006" #random
+msgid "Random"
+msgstr ""
+
+msgctxt "#32007" #level
+msgid "Level"
+msgstr ""
+
+msgctxt "#32008" #level_1
+msgid "Very Easy"
+msgstr ""
+
+msgctxt "#32009" #level_2
+msgid "Easy"
+msgstr ""
+
+msgctxt "#32010" #level_3
+msgid "Normal"
+msgstr ""
+
+msgctxt "#32011" #level_4
+msgid "Harder"
+msgstr ""
+
+msgctxt "#32012" #level_5
+msgid "Hardest"
+msgstr ""
+
+msgctxt "#32013" #quit
+msgid "Quit"
+msgstr ""
