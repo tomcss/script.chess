@@ -19,7 +19,8 @@ STRINGS = {
         "level_3"   :32010,
         "level_4"   :32011,
         "level_5"   :32012,
-        "quit"      :32013
+        "quit"      :32013,
+        "help_text" :32000
         }
 
 def _(string_id):

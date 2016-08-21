@@ -20,6 +20,8 @@ MATE_VALUE = 30000
 FILES = 'abcdefgh'
 SEARCHDEPTH = [5000, 10000, 20000, 50000, 100000]
 
+_ = lib._
+
 #TODO: Add info panel
 #TODO: Add Last Computer Move indicator
 
@@ -157,6 +159,15 @@ class ChessWindow(xbmcgui.Window):
                         filename = lib.imgpath + 'selected.png')
         self.addControl( self.images['selected'])
 
+        self.txtHelp = xbmcgui.ControlTextBox(
+                            x = 1130,
+                            y = 330,
+                            width  = 690,
+                            height = 650,
+                            font   = 'font14')
+        self.addControl( self.txtHelp)
+        self.txtHelp.setText( _('help_text'))
+        
         print("d")
 
         tilelist = [] # adding the controls one by one is really slow, so
@@ -180,12 +191,9 @@ class ChessWindow(xbmcgui.Window):
                                                  label     = 'Status',
                                                  font      = 'font35_title',
                                                  textColor = '0xFFFFFFFF')
-        self.fontSize = 12
         self.addControl( self.lblFeedback)
 
         initialPosition = sunfish.initial
-        #if side==BLACK:
-        #    initialPosition = self.reverseCase(initialPosition)
         
         if loadGame:
             self.loadGame()
