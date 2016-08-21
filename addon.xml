@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.chess" name="Chess" version="0.4.0" provider-name="zag">
+<addon id="script.chess" name="Chess" version="0.5.0" provider-name="Tom C. Scheper (scheper@gmail.com)">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
     </requires>
@@ -10,12 +10,12 @@
         <platform>all</platform>
         <summary lang="en">Simple chess game for Kodi</summary>
         <description lang="en">Play chess on Kodi! Test your skills against the
-            sunfish engine and see where you stand.
+            python sunfish engine in the age old game of chess.
         </description>
         <license>All rights reserved</license>
         <language></language>
         <forum></forum>
-        <source></source>
+        <source>https://github.com/tomcss/script.chess</source>
         <email>scheper@gmail.com</email>
     </extension>
 </addon>
