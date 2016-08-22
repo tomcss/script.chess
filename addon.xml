@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.chess" name="Chess" version="0.5.0" provider-name="Tom C. Scheper (scheper@gmail.com)">
+<addon id="script.chess" name="Chess" version="1.0.0" provider-name="Tom C. Scheper (scheper@gmail.com)">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
     </requires>
