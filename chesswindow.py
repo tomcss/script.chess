@@ -1,4 +1,5 @@
-import xbmc, xbmcgui, sunfish, thread, xbmcaddon, os, json, lib
+import xbmcgui# @UnresolvedImport
+import sunfish, thread,os, json, lib
 
 #Consts
 
@@ -95,6 +96,12 @@ class ChessWindow(xbmcgui.Window):
         f = open( lib.savefile, "w")
         f.write( json.dumps( self.gameData))
         f.close()
+        
+    def onControl( self, control):
+        print("jop")
+        
+    def onClick( self, cid):
+        print(cid)
         
     def loadGame( self):
         
@@ -205,6 +212,8 @@ class ChessWindow(xbmcgui.Window):
         if side==BLACK:
             thread.start_new_thread( self.computerMove, ())
             
+        self.button = xbmcgui.ControlButton(0, 0, 100, 100, "Click Me")
+        self.addControl(self.button)
         self.displayPieces()
       
 
