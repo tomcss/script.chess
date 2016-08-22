@@ -1,9 +1,8 @@
-import xbmcaddon
-import xbmc
+import xbmcaddon, xbmc # @UnresolvedImport
 
 addon    = xbmcaddon.Addon()
 profile  = xbmc.translatePath( addon.getAddonInfo('profile') ).decode("utf-8")
-imgpath  = "special://home/addons/script.chess/resources/media/"
+imgpath  = xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path')).decode('utf-8')+'/resources/media/'
 savefile = profile + "savegame.json"
 
 STRINGS = {
@@ -20,7 +19,9 @@ STRINGS = {
         "level_4"   :32011,
         "level_5"   :32012,
         "quit"      :32013,
-        "help_text" :32000
+        "help_text" :32000,
+        "player_won_text":32014,
+        "player_lost_text":32015
         }
 
 def _(string_id):

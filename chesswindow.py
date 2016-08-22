@@ -73,8 +73,6 @@ class ChessWindow(xbmcgui.Window):
 
         self.images['cursor'].setPosition( 97 + self.cursorX*110,
                                            97 + self.cursorY*110)
-
-        print( action.getId())
     
     def reverseCase(self, s):
         return ''.join([x.lower() if x.isupper() else x.upper() for x in s])
@@ -96,12 +94,6 @@ class ChessWindow(xbmcgui.Window):
         f = open( lib.savefile, "w")
         f.write( json.dumps( self.gameData))
         f.close()
-        
-    def onControl( self, control):
-        print("jop")
-        
-    def onClick( self, cid):
-        print(cid)
         
     def loadGame( self):
         
@@ -134,7 +126,6 @@ class ChessWindow(xbmcgui.Window):
         self.gameData = {}
 
         self.setCoordinateResolution( 0)
-        lib.imgpath = 'special://home/addons/script.chess/resources/media/'
         self.images = {}
         self.images['background'] = xbmcgui.ControlImage(
                         x=0,
@@ -175,8 +166,6 @@ class ChessWindow(xbmcgui.Window):
         self.addControl( self.txtHelp)
         self.txtHelp.setText( _('help_text'))
         
-        print("d")
-
         tilelist = [] # adding the controls one by one is really slow, so
                       # I'm using a tilelist to add the 64 images in one go
                       # with addControls instead of addControl
@@ -234,11 +223,11 @@ class ChessWindow(xbmcgui.Window):
         move, score     = sunfish.search( self.pos, SEARCHDEPTH[ self.difficulty])
 
         if score <= -MATE_VALUE:
-            self.feedback("Checkmate! You won!")
+            self.feedback( _('player_won_text'))
             self.clearSaveGame();
             return
         if score >= MATE_VALUE:
-            self.feedback("Checkmate! You lost!")
+            self.feedback( _('player_lost_text'))
             self.clearSaveGame()
             return
 

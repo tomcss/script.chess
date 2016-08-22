@@ -71,3 +71,11 @@ msgstr ""
 msgctxt "#32000" #help_text
 msgid "Use the arrow keys to move the cursor around and press Enter or Space to select\n\nAll pawn promotions become queens\n\nThe game automatically saves after every move - use Continue from the main menu to resume your previous game\n\nPress Escape or Backspace to exit"
 msgstr ""
+
+msgctxt "#32014" #player_won_text
+msgid "Checkmate! Well played!"
+msgstr ""
+
+msgctxt "#32015" #player_lost_text
+msgid "Checkmate! You lost!"
+msgstr ""
