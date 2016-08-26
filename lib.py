@@ -26,10 +26,7 @@ STRINGS = {
 
 def _(string_id):
     if string_id in STRINGS:
-        #print(string_id)
-        print( "--{0}--".format(addon.getLocalizedString(32003)))
         return addon.getLocalizedString(STRINGS[string_id])
     else:
-        print("Fuck me!")
         xbmc.log('String is missing: %s' % string_id, level=xbmc.LOGDEBUG)
         return string_id
