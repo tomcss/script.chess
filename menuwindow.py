@@ -8,11 +8,12 @@ _ = lib._
 #get actioncodes from https://github.com/xbmc/xbmc/blob/master/xbmc/guilib/Key.h
 ACTION_PREVIOUS_MENU = 10
 ACTION_SELECT_ITEM = 7
-ACTION_LEFT  = 1
-ACTION_RIGHT = 2
-ACTION_UP    = 3
-ACTION_DOWN  = 4
-ACTION_ENTER = 7
+ACTION_BSPACE = 92
+ACTION_LEFT   = 1
+ACTION_RIGHT  = 2
+ACTION_UP     = 3
+ACTION_DOWN   = 4
+ACTION_ENTER  = 7
 
 WHITE = 0
 BLACK = 1
@@ -29,7 +30,8 @@ FILES = 'abcdefgh'
 
 class MenuWindow(xbmcgui.Window):
     def onAction( self, action):
-        if action == ACTION_PREVIOUS_MENU:
+        if action == ACTION_PREVIOUS_MENU or \
+           action == ACTION_BSPACE:
             self.close()
 
     def onControl( self, control):
