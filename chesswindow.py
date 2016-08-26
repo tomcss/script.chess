@@ -19,6 +19,19 @@ BLACK = 1
 MATE_VALUE = 30000
 
 FILES = 'abcdefgh'
+PIECE_FILENAMES = {'r': 'black_rook.png',
+                   'n': 'black_knight.png',
+                   'p': 'black_pawn.png',
+                   'b': 'black_bishop.png',
+                   'q': 'black_queen.png',
+                   'k': 'black_king.png',
+                   'R': 'white_rook.png',
+                   'N': 'white_knight.png',
+                   'P': 'white_pawn.png',
+                   'B': 'white_bishop.png',
+                   'Q': 'white_queen.png',
+                   'K': 'white_king.png',
+                   't': 't.png' }
 SEARCHDEPTH = [5000, 10000, 20000, 50000, 100000]
 
 _ = lib._
@@ -251,5 +264,5 @@ class ChessWindow(xbmcgui.Window):
                 elif self.playerSide == BLACK:
                     piece = self.reverseCase( piece)
                 
-                piece = piece + '.png'
-                self.images['{0}x{1}'.format( col, row)].setImage( lib.imgpath + piece)
+                self.images['{0}x{1}'.format( col, row)].setImage(
+                    lib.imgpath + PIECE_FILENAMES[piece])
